@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.glide.list_v2</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glide.list_v2" 
+		name="List v2"
+		version="1.0.0" 
+		state="published"
+		provider_name="ServiceNow"
+        help="List_v2_Plugin"
+		cache_flush="true"&gt;
+
+   &lt;description&gt;Updates to the display of lists that include a cleanup UI, hierarchical lists and related lists embedded in forms&lt;/description&gt;
+
+	&lt;requires&gt;
+		&lt;import plugin="com.glide.tiny_url"/&gt;
+		&lt;import plugin="com.glide.ui_list_edit_with_form"/&gt;
+        &lt;import plugin="com.glide.db_context_menu" /&gt;
+	&lt;/requires&gt;
+
+	&lt;extension point="com.glide.ui.jelly" name="breadcrumbs" class="com.glide.list_v2.BreadcrumbsTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="related_lists2" class="com.glide.list_v2.RelatedLists2Tag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_default" class="com.glide.list_v2.ListPropertiesDefaultTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_refresh" class="com.glide.list_v2.ListPropertiesRefreshTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_related" class="com.glide.list_v2.ListPropertiesRelatedTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_related_m2m" class="com.glide.list_v2.ListPropertiesRelatedM2M" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_relationship" class="com.glide.list_v2.ListPropertiesRelationshipTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_custom" class="com.glide.list_v2.ListPropertiesCustomTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_record_default" class="com.glide.list_v2.ListRecordDefaultTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_record_related" class="com.glide.list_v2.ListRecordRelatedTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_record_relationship" class="com.glide.list_v2.ListRecordRelationshipTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_record_sys_ref_list" class="com.glide.list_v2.ListRecordSysRefListTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="list_record_grouped" class="com.glide.list_v2.ListRecordGroupedTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="for_each_group2" class="com.glide.list_v2.ForEachGroup2Tag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="for_each_aggregate2" class="com.glide.list_v2.ForEachAggregate2Tag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="hierarchical_lists_setup" class="com.glide.list_v2.HierarchicalListsSetup" /&gt;
+
+   	&lt;extension point="com.glide.uri.parameter.handler" name="sysparm_list_filter" class="com.glide.list_v2.URIParameterListFilter"/&gt;
+   	&lt;extension point="com.glide.uri.parameter.handler" name="stackparm" class="com.glide.list_v2.URIParameterStackParm"/&gt;
+   	&lt;extension point="com.glide.uri.parameter.handler" name="sysparm_goto_query" class="com.glide.list_v2.URIParameterGotoQuery"/&gt;
+
+    &lt;extension point="com.glide.ajax.processors" name="AJAXListGrouping" class="com.glide.list_v2.AJAXListGrouping"/&gt;
+
+	&lt;extension point="com.glide.scriptable_object" name="QueryStringCompatibility" class="com.glide.list_v2.QueryStringCompatibility" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Updates to the display of lists that include a cleanup UI, hierarchical lists and related lists embedded in forms&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=List_v2_Plugin&lt;/help&gt;
+        &lt;id&gt;com.glide.list_v2&lt;/id&gt;
+        &lt;licensable&gt;false&lt;/licensable&gt;
+        &lt;name&gt;List v2&lt;/name&gt;
+        &lt;path&gt;plugin://com.glide.list_v2/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.tiny_url,com.glide.ui_list_edit_with_form,com.glide.db_context_menu&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:21&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.glide.list_v2&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:21&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;false&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2ebf56564f320300fd1ce9628110c7db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List v2</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_2ebf56564f320300fd1ce9628110c7db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:42</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

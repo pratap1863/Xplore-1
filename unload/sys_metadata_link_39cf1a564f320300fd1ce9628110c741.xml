@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.project_management_v3</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+   id="com.snc.project_management_v3"
+   name="Project Management"
+   version="1.0.0"
+   cache_flush="true" 
+   provider_name="ServiceNow"
+   state="published"
+   type="application"
+   help="Project_Management_v3_Plugin"
+   licensable="true"
+   license_model="producer"&gt;
+   &lt;requires&gt;
+   	&lt;import plugin="com.snc.project_management_delete" /&gt;
+  	&lt;import plugin="com.glide.schedules"/&gt;
+  	&lt;import plugin="com.snc.planned_task_v2"/&gt;	   
+  	&lt;import plugin="com.snc.time_card"/&gt;
+  	&lt;import plugin="com.snc.skills_management"/&gt;
+  	&lt;import plugin="com.snc.process_flow_formatter" /&gt;
+  	&lt;import plugin="com.snc.cost_management"/&gt;
+  	&lt;import plugin="com.snc.project_management_db_views" /&gt;
+    &lt;import plugin="com.snc.project_workbench" /&gt;
+    &lt;import plugin="com.snc.timeline_visualization"/&gt;
+    &lt;import plugin="com.glide.ui.checklist"/&gt;
+   &lt;/requires&gt;
+   &lt;extension point="com.glide.scriptable_object" name="ProjectManagementAPI" class="com.snc.project_management.engine.ProjectManagementAPI" /&gt;   
+   &lt;extension point="com.glide.scriptable_object" name="PPMConfig" class="com.snc.project_management.PPMConfig" /&gt;
+   &lt;description&gt;The Project Management application aids in planning, organizing and managing projects and resources in order to setup, execute, and complete a project faster and easier. Only upgrade is allowed for this plugin. Activation should be done through Project Portfolio Suite with Financials plugin.&lt;/description&gt;
+   &lt;no_activate&gt;true&lt;/no_activate&gt;
+ &lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;The Project Management application aids in planning, organizing and managing projects and resources in order to setup, execute, and complete a project faster and easier. Only upgrade is allowed for this plugin. Activation should be done through Project Portfolio Suite with Financials plugin.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=Project_Management_v3_Plugin&lt;/help&gt;
+        &lt;id&gt;com.snc.project_management_v3&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Project Management&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.project_management_v3/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.snc.project_management_delete,com.glide.schedules,com.snc.planned_task_v2,com.snc.time_card,com.snc.skills_management,com.snc.process_flow_formatter,com.snc.cost_management,com.snc.project_management_db_views,com.snc.project_workbench,com.snc.timeline_visualization,com.glide.ui.checklist&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.project_management_v3&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:56</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>39cf1a564f320300fd1ce9628110c741</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Project Management</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_39cf1a564f320300fd1ce9628110c741</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:56</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

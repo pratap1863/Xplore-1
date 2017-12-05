@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.cmdb</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.1&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+	id="com.snc.cmdb"
+	name="Configuration Management (CMDB)"
+	version="1.1"
+	state="published"
+	help="CMDB_Plugin"
+    provider_name="ServiceNow"
+    cache_flush="true"
+    licensable="true"&gt;
+    &lt;requires&gt;
+        &lt;import plugin="com.glide.custom_web_service"/&gt;
+        &lt;import plugin="com.sn_cmdb_content"/&gt;
+        &lt;import plugin= "com.snc.db.rotation"/&gt;
+        &lt;import plugin="com.glide.ui.list_v3_components"/&gt;
+    &lt;/requires&gt;
+	&lt;extension point="com.snc.slushbucket.save.handler" name="proposed_change" class="com.snc.cmdb.ProposedChangeSlushbucket" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CMDBUtil" class="com.snc.cmdb.CMDBUtil" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="cmdb_diff" class="com.snc.cmdb.CMDBDiffTag2" /&gt;
+	&lt;extension point="com.glide.ui.treepicker_ajaxprocessor" name="ecmdb_ajax_processors" class="com.snc.cmdb.ECMDBAjaxProcessor$ECMDBMatcher" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="IdentificationEngineScriptableApi" class="com.snc.cmdb.identify_reconcile.IdentificationEngineScriptableApi"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="StateManagementScriptableApi" class="com.snc.cmdb.ci_lifecycle.StateManagementScriptableApi"/&gt;
+	&lt;extension point="com.glide.rest.service" name="IdentifyReconcileAPI" class="com.snc.cmdb.identify_reconcile.IdentificationEngineService"/&gt;
+    &lt;extension point="com.glide.rest.service" name="CILifecycleMgmtAPI" class="com.snc.cmdb.ci_lifecycle.StateManagementEngineService"/&gt;
+	&lt;extension point="com.glide.script.engine" name="ServiceCacheScriptEngine" class="com.snc.cmdb.service.cache.ServiceCacheScriptEngine"/&gt;
+	&lt;extension point="com.glide.rest.service" name="CIModelProcessor" class="com.snc.cmdb.cimodel.CiModelProcessor"/&gt;
+	&lt;extension point="com.glide.rest.service" name="CmdbHealthRESTService" class="com.snc.cmdb.health.CmdbHealthRESTService"/&gt;
+	&lt;extension point="com.glide.rest.service" name="QueryBuilderRESTService" class="com.snc.cmdb.query.QueryBuilderRESTService"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="MetricProcessorScript" class="com.snc.cmdb.health.MetricProcessorScript" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="RemediationScript" class="com.snc.cmdb.health.RemediationScript" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="RemediationUtil" class="com.snc.cmdb.health.RemediationUtil" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="QueryBuilderSuggestedRelationships" class="com.snc.cmdb.query.QueryBuilderSuggestedRelationships" /&gt;
+	&lt;extension point="com.glide.rest.service" name="RemediationService" class="com.snc.cmdb.health.RemediationService"/&gt;
+	&lt;extension point="com.glide.rest.service" name="CMDBTableUI" class="com.snc.cmdb.ui.CMDBTableProcessor"/&gt;
+	&lt;extension point="com.glide.document_job" name="sysauto_query_builder" class="com.snc.cmdb.query.schedule.MailQueryJob" /&gt;
+	&lt;extension point="COM_GLIDE_NOTIFICATION" name="queryID" class="com.glide.notification.substitution.EmailQueryBuilderGenerator" /&gt;
+	&lt;extension point="com.glideapp.report" name="queryID" class="com.glide.notification.substitution.EmailQueryBuilderGenerator" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description/&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=CMDB_Plugin&lt;/help&gt;
+        &lt;id&gt;com.snc.cmdb&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Configuration Management (CMDB)&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.cmdb/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.custom_web_service,com.sn_cmdb_content,com.snc.db.rotation,com.glide.ui.list_v3_components&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.cmdb&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.1&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>08cf96564f320300fd1ce9628110c7e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Configuration Management (CMDB)</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_08cf96564f320300fd1ce9628110c7e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:48</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

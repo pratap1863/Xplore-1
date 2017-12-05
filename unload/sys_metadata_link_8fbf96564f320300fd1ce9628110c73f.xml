@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.glide.ui.m</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;4.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+	id="com.glide.ui.m"
+	name="Mobile UI"
+	state="published"
+	version="4.0.0"
+	licensable="true"
+	provider_name="ServiceNow"&gt;
+	&lt;description&gt;User interface for mobile devices running iOS 6+ or Android 4+ with the Chrome browser&lt;/description&gt;
+	&lt;requires&gt;
+
+		&lt;!-- TODO: audit --&gt;
+		&lt;import plugin="com.glide.wiki"/&gt;
+		&lt;import plugin="com.glide.labels"/&gt;
+		&lt;import plugin="com.glide.db_images"/&gt;
+		&lt;import plugin="com.glide.ui.font_icons"/&gt;
+		&lt;import plugin="com.glide.ui.ng"/&gt;
+		&lt;import plugin="com.glide.ui.zepto"/&gt;
+		&lt;import plugin="com.glide.ui.tablet.theme"/&gt;
+		&lt;import plugin="com.glide.ui.recent_selections"/&gt;
+		&lt;import plugin="com.glide.ui.table_titles"/&gt;
+		&lt;import plugin="com.snc.platform.security.oauth"/&gt;
+
+		&lt;!-- geneva deps --&gt;
+		&lt;import plugin="com.glide.ui.magellan_navigator_api"/&gt;
+		&lt;import plugin="com.glide.ui.list_api"/&gt;
+		&lt;import plugin="com.glide.notification.push"/&gt;
+    &lt;/requires&gt;
+
+	&lt;extension point="com.glide.rest.service" name="AnalyticsNowREST" class="com.glide.usageanalytics.rest.UAPlatformAnalyticsService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileActivityStream" class="com.glide.ui.m.rest.MobileActivityStreamService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileApp" class="com.glide.ui.m.rest.AppService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileAppBootstrap" class="com.glide.ui.m.rest.MobileAppBootstrapService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileAppShortcut" class="com.glide.ui.m.rest.MobileAppShortcutService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileFavorite" class="com.glide.ui.m.rest.MobileFavoriteService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileHelp" class="com.glide.ui.m.rest.MobileHelpService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileHome" class="com.glide.ui.m.rest.MobileHomeService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileNavigator" class="com.glide.ui.m.rest.MobileNavigatorService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobilePluginInfo" class="com.glide.ui.m.rest.MobilePluginInfoService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileRecord" class="com.glide.ui.m.rest.MobileRecordService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileUIAction" class="com.glide.ui.m.rest.MobileUIActionService" /&gt;
+	&lt;extension point="com.glide.rest.service" name="MobileVisualization" class="com.glide.ui.m.rest.MobileVisualizationService" /&gt;
+
+    &lt;extension point="com.glide.scriptable_object" name="GlideNGSysList" class="com.glide.ui.ng.NGSysList"/&gt;
+	&lt;extension point="com.glide.ui.ng"  name="ui_policy"         		class="com.glide.ui.ng.NGUIPolicyProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="client_script"       		class="com.glide.ui.ng.NGClientScriptProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="ui_action"         		class="com.glide.ui.ng.NGMobileUIActionProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="list_data"         		class="com.glide.ui.ng.NGListDataProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="glide_list_data"     		class="com.glide.ui.ng.NGListDataProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="choice_list_data"  		class="com.glide.ui.ng.NGChoiceListProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="record_data"       		class="com.glide.ui.ng.NGRecordDataProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="record_related_lists"      class="com.glide.ui.ng.NGRelatedListProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="get_partial"       		class="com.glide.ui.ng.NGPartialProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="record_save"       		class="com.glide.ui.ng.NGRecordSaveProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="stream_data"     			class="com.glide.ui.ng.NGStreamActivityProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog"         			class="com.glide.ui.ng.catalog.NGCatalogProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_item"      		class="com.glide.ui.ng.catalog.NGCatalogItemProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_ui_policy" 		class="com.glide.ui.ng.catalog.NGCatalogUIPolicyProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_form_ui_policy" 	class="com.glide.ui.ng.catalog.NGCatalogUIPolicyProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_data_lookup" 		class="com.glide.ui.ng.catalog.NGCatalogDataLookupProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_form_data_lookup" class="com.glide.ui.ng.catalog.NGCatalogDataLookupProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="run_catalog_data_lookup"  class="com.glide.ui.ng.catalog.NGCatalogDataLookupProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="catalog_cart"      		class="com.glide.ui.ng.catalog.NGCatalogCartProcessor" /&gt;
+    &lt;extension point="com.glide.ui.ng"  name="catalog_order_status" 	class="com.glide.ui.ng.catalog.NGCatalogOrderStatusProcessor" /&gt;
+    &lt;extension point="com.glide.ui.ng"  name="variable_editor"			class="com.glide.ui.ng.catalog.NGVariableEditorProcessor" /&gt;
+    &lt;extension point="com.glide.ui.ng"  name="catalog_client_script"	class="com.glide.ui.ng.catalog.NGCatalogClientScriptProcessor" /&gt;
+    &lt;extension point="com.glide.ui.ng"  name="catalog_form_client_script" class="com.glide.ui.ng.catalog.NGCatalogClientScriptProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="home"						class="com.glide.ui.ng.NGHomeProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="report"					class="com.glide.ui.ng.NGReportProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="navigator"				class="com.glide.ui.ng.NGNavigatorProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="labels"					class="com.glide.ui.ng.NGLabelProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"  name="knowledge_base_browser"   class="com.glide.ui.ng.knowledge_base.NGKnowledgeBaseBrowserProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng"  name="knowledge_base_view"		class="com.glide.ui.ng.knowledge_base.NGKnowledgeBaseViewProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng"  name="util"        				class="com.glide.ui.ng.NGUtilProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng"  name="personal_tasks"       	class="com.glide.ui.ng.personal_tasks.NGPersonalTasksProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng"  name="direct_record"      		class="com.glide.ui.ng.NGDirectRecordProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng"	name="get_user"					class="com.glide.ui.ng.NGUserProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="favorites"				class="com.glide.ui.ng.NGFavoriteProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="recent_filter"			class="com.glide.ui.ng.NGRecentFilterProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="gliderecord"				class="com.glide.ui.ng.NGGlideRecordProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng"	name="starting_page"			class="com.glide.ui.ng.NGStartingPageProcessor" /&gt;
+
+	&lt;extension point="com.glide.ui.virtual_host" name="apple_app_site" class="com.glide.ui.m.rest.AppleAppSiteProvider" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;User interface for mobile devices running iOS 6+ or Android 4+ with the Chrome browser&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glide.ui.m&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Mobile UI&lt;/name&gt;
+        &lt;path&gt;plugin://com.glide.ui.m/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.wiki,com.glide.labels,com.glide.db_images,com.glide.ui.font_icons,com.glide.ui.ng,com.glide.ui.zepto,com.glide.ui.tablet.theme,com.glide.ui.recent_selections,com.glide.ui.table_titles,com.snc.platform.security.oauth,com.glide.ui.magellan_navigator_api,com.glide.ui.list_api,com.glide.notification.push&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:21&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.glide.ui.m&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:21&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;4.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8fbf96564f320300fd1ce9628110c73f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mobile UI</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_8fbf96564f320300fd1ce9628110c73f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:44</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

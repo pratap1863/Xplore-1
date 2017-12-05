@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.knowledge3</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+        id="com.snc.knowledge3"
+        name="Knowledge Management V3"
+        version="1.0.0"
+        provider_name="ServiceNow"
+        help="CSHelp:Knowledge_Management"
+        description="Knowledge Management V3"
+        state="published"
+        licensable="true"&gt;
+
+    &lt;requires&gt;
+		&lt;import plugin="com.glide.ui.angular"/&gt;
+		&lt;import plugin="com.glide.ui.ng"/&gt;
+		&lt;import plugin="com.glideapp.knowledge2"/&gt;
+		&lt;import plugin="com.glideapp.user_criteria"/&gt;
+		&lt;import plugin="com.snc.contextual_search"/&gt;
+        &lt;import plugin="com.snc.db.rotation"/&gt;
+        &lt;import plugin="com.glideapp.live_feed_v2"/&gt;
+        &lt;import plugin="com.glideapp.report.knowledge.overview"/&gt;
+    &lt;/requires&gt;
+
+	&lt;!-- Glide Scriptable exposed Javascript classes //--&gt;
+    &lt;extension point="com.glide.scriptable_object" name="KnowledgeHelper" class="com.snc.knowledge3.js.KnowledgeHelper"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="KnowledgeSearch" class="com.snc.knowledge3.js.KnowledgeSearch"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="KnowledgeTopRankedArticles" class="com.snc.knowledge3.js.KnowledgeTopRankedArticles"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="KnowledgeIcon" class="com.snc.knowledge3.js.KnowledgeIcon"/&gt;
+
+	&lt;!-- Angular Processors //--&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_article_processor" 				class="com.snc.knowledge3.processors.NGArticleProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_advanced_search_processor" 		class="com.snc.knowledge3.processors.NGAdvancedSearchProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_search_filter_processor" 		class="com.snc.knowledge3.processors.NGSearchFilterProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_top_ranked_articles_processor" 	class="com.snc.knowledge3.processors.NGTopRankedArticles" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_read_processor"					class="com.snc.knowledge3.processors.NGKnowledgeImportProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="my_knowledgebases_processor" 				class="com.snc.knowledge3.processors.NGMyKnowledgeBasesProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="knowledge_tags_processor" 				    class="com.snc.knowledge3.processors.NGKnowledgeTagsProcessor" /&gt;
+
+	&lt;!-- Knowledge live feed commenting engine --&gt; 
+    &lt;extension point="com.glide.script.engine" name="KnowledgeCommentsEngine" class="com.snc.knowledge3.comments.engine.KnowledgeCommentsEngine" /&gt;
+    &lt;extension point="com.glide.ui.ng" name="glide_record_search_processor"       class="com.snc.knowledge3.processors.NGGlideRecordSearchProcessor" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description/&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=CSHelp:Knowledge_Management&lt;/help&gt;
+        &lt;id&gt;com.snc.knowledge3&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Knowledge Management V3&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.knowledge3/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.ui.angular,com.glide.ui.ng,com.glideapp.knowledge2,com.glideapp.user_criteria,com.snc.contextual_search,com.snc.db.rotation,com.glideapp.live_feed_v2,com.glideapp.report.knowledge.overview&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.knowledge3&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:52</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>05cfd6564f320300fd1ce9628110c791</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Knowledge Management V3</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_05cfd6564f320300fd1ce9628110c791</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:52</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

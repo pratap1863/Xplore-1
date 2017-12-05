@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>ideapp.servicecatalog.scoped.api</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glideapp.servicecatalog.scoped.api" 
+		name="Service Catalog Scoped API" 
+		state="published" 
+		version="1.0.0" 
+		provider_name="ServiceNow" 
+		namespace="sn_sc"
+		licensable="true"&gt;
+	&lt;description&gt;Service Catalog Scoped API to support application creation on Service Catalog platform&lt;/description&gt;
+
+	&lt;requires&gt;
+	    &lt;import plugin="com.glideapp.servicecatalog"/&gt;
+	&lt;/requires&gt;
+
+	&lt;!-- Java classes scriptable API --&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogJS" class="com.glideapp.servicecatalog.scoped.api.CatalogJS"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatItem" class="com.glideapp.servicecatalog.scoped.api.CatalogItemJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatCategory" class="com.glideapp.servicecatalog.scoped.api.CategoryJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogItemVariable" class="com.glideapp.servicecatalog.scoped.api.CatalogItemVariableJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogItemVariableSet" class="com.glideapp.servicecatalog.scoped.api.CatalogItemVariableSetJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogItemVariableSetM2M" class="com.glideapp.servicecatalog.scoped.api.CatalogItemVariableSetM2MJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogSearchJS" class="com.glideapp.servicecatalog.scoped.api.CatalogSearchJS"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CartJS" class="com.glideapp.servicecatalog.scoped.api.CartJS"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="OrderGuide" class="com.glideapp.servicecatalog.scoped.api.OrderGuideJS"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogClientScript" class="com.glideapp.servicecatalog.scoped.api.CatalogClientScriptJS"/&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Service Catalog Scoped API to support application creation on Service Catalog platform&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glideapp.servicecatalog.scoped.api&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Service Catalog Scoped API&lt;/name&gt;
+        &lt;path&gt;plugin://com.glideapp.servicecatalog.scoped.api/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glideapp.servicecatalog&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ideapp.servicecatalog.scoped.api&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:31:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>afcf5a564f320300fd1ce9628110c745</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog Scoped API</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_afcf5a564f320300fd1ce9628110c745</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:31:02</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

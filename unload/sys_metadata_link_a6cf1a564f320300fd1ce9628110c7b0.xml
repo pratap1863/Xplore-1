@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.timeline_visualization</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+   id="com.snc.timeline_visualization"
+   name="Timeline Visualization"
+   version="1.0.0"
+   provider_name="ServiceNow"
+   state="published"
+   type="application"
+   help="Timeline Visualizations"
+   licensable="true"&gt;
+
+	   &lt;extension point="com.glide.ui.jelly" 
+		   name="com.glide.schedules.schedule_page" 
+		   class="com.glide.schedules.SchedulePageTag"/&gt;
+	   &lt;extension point="com.glide.element" name="repeat_count" class="com.glide.script.glide_elements.GlideElementNumeric"/&gt;
+   &lt;requires&gt;
+  		&lt;import plugin="com.snc.project_management_v3" /&gt;
+   &lt;/requires&gt;		   
+   &lt;description&gt;
+   Timeline Visualization plugin enables graphical representation of activities over time. You can use this visualization to provide a high-level view of your organization's strategic and operational activities such as incidents, problems, changes, and projects. An out of the box visualization provided by this plugin is CIO Roadmap. This roadmap shows your organization's projects grouped by portfolios. Your organization's leaders can use the CIO roadmap to monitor and evaluate the status of current and upcoming projects.
+   &lt;/description&gt;
+
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Timeline Visualization plugin enables graphical representation of activities over time. You can use this visualization to provide a high-level view of your organization's strategic and operational activities such as incidents, problems, changes, and projects. An out of the box visualization provided by this plugin is CIO Roadmap. This roadmap shows your organization's projects grouped by portfolios. Your organization's leaders can use the CIO roadmap to monitor and evaluate the status of current and upcoming projects.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=Timeline Visualizations&lt;/help&gt;
+        &lt;id&gt;com.snc.timeline_visualization&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Timeline Visualization&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.timeline_visualization/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.snc.project_management_v3&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.timeline_visualization&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a6cf1a564f320300fd1ce9628110c7b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Timeline Visualization</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_a6cf1a564f320300fd1ce9628110c7b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:58</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

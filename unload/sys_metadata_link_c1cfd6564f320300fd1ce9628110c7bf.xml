@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.on_call_rotation</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;2.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin 
+  id="com.snc.on_call_rotation"
+  name="On-Call Scheduling"
+  version="2.0.0"
+  cache_flush="true"
+  state="published"
+  type="application"
+  provider_name="ServiceNow"
+  help="On-Call_Scheduling"
+  after_install_or_upgrade="activate_notify_extensions.js"
+  licensable="true"&gt;
+
+  &lt;description&gt;Provides the ability to create on-call schedules and escalation trees. When an incident is created, dynamically route the escalation to an on-call resource. On Call allows you to configure and build different on-call schedules per process and assignment group. When utilizing the Notify plugin, resources can use SMS and Voice escalations to interact with the the escalation to acknowledge incidents etc.&lt;/description&gt;
+
+  &lt;requires&gt;
+    &lt;import plugin="com.glide.schedules" /&gt;
+    &lt;import plugin="com.glide.notification" /&gt;
+    &lt;import plugin="com.glide.ui.ng" /&gt;
+    &lt;import plugin="com.snc.app.calendar" /&gt;
+    &lt;import plugin="com.snc.fullcalendar" /&gt;
+  &lt;/requires&gt;
+
+  &lt;!-- Java classes scriptable API --&gt;
+  &lt;extension point="com.glide.scriptable_object" name="OnCallRotation" class="com.snc.on_call_rotation.js.OnCallRotationJS" /&gt;
+  &lt;extension point="com.glide.scriptable_object" name="OnCallURLGenerator" class="com.snc.on_call_rotation.js.OnCallURLGeneratorJS" /&gt;
+  &lt;extension point="com.glide.scriptable_object" name="OnCallCompatibility" class="com.snc.on_call_rotation.js.OnCallCompatibilityJS" /&gt;
+  &lt;extension point="com.glide.scriptable_object" name="OnCallRoster" class="com.snc.on_call_rotation.js.OnCallRosterJS" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Provides the ability to create on-call schedules and escalation trees. When an incident is created, dynamically route the escalation to an on-call resource. On Call allows you to configure and build different on-call schedules per process and assignment group. When utilizing the Notify plugin, resources can use SMS and Voice escalations to interact with the the escalation to acknowledge incidents etc.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=On-Call_Scheduling&lt;/help&gt;
+        &lt;id&gt;com.snc.on_call_rotation&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;On-Call Scheduling&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.on_call_rotation/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.schedules,com.glide.notification,com.glide.ui.ng,com.snc.app.calendar,com.snc.fullcalendar&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.on_call_rotation&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;2.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c1cfd6564f320300fd1ce9628110c7bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On-Call Scheduling</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_c1cfd6564f320300fd1ce9628110c7bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:53</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

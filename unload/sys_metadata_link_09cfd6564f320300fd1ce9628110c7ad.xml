@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.notify</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+	id="com.snc.notify"
+	name="Notify"
+	version="1.0.0"
+	type="feature_set"
+	state="published"
+	help="Notify"
+	provider_name="ServiceNow"
+	licensable="true"
+    allowed_as_dependency="false"
+    after_install_or_upgrade="fix_script.js"&gt;
+	&lt;description&gt;Notify provides powerful platform features for workflow-driven voice calls, conference calls, and SMS messages making it possible to create flexible Interactive Voice Response (IVR) systems to do virtually anything. Requires the Twilio Driver and a separate contract with Twilio for SMS and Voice capabilities.&lt;/description&gt;
+	&lt;requires&gt;
+		&lt;import plugin="com.glide.phone_number"/&gt;
+        &lt;import plugin="com.snc.notify.twilio"/&gt;
+	&lt;/requires&gt;
+    &lt;!-- Notify main api //--&gt;
+    &lt;extension point="com.glide.scriptable_object" name="Notify"            class="com.snc.notify.js.NotifyAPI"/&gt;
+
+    &lt;!-- Notify child classes //--&gt;
+    &lt;extension point="com.glide.scriptable_object" name="NotifyPhoneNumber" class="com.snc.notify.NotifyPhoneNumber"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="NotifyAction"      class="com.snc.notify.NotifyAction"/&gt;
+
+    &lt;!-- Notify Actions //--&gt;
+    &lt;extension point="com.glide.scriptable_object" name="ConferenceAction"  class="com.snc.notify.actions.ConferenceAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="DialAction"        class="com.snc.notify.actions.DialAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="GatherAction"      class="com.snc.notify.actions.GatherAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="HangUpAction"      class="com.snc.notify.actions.HangUpAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="PlayAction"        class="com.snc.notify.actions.PlayAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="QueueAction"       class="com.snc.notify.actions.QueueAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="RecordAction"      class="com.snc.notify.actions.RecordAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="RejectAction"      class="com.snc.notify.actions.RejectAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SayAction"         class="com.snc.notify.actions.SayAction"/&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SMSAction"         class="com.snc.notify.actions.SMSAction"/&gt;
+ &lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Notify provides powerful platform features for workflow-driven voice calls, conference calls, and SMS messages making it possible to create flexible Interactive Voice Response (IVR) systems to do virtually anything. Requires the Twilio Driver and a separate contract with Twilio for SMS and Voice capabilities.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=Notify&lt;/help&gt;
+        &lt;id&gt;com.snc.notify&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Notify&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.notify/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.phone_number,com.snc.notify.twilio&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.notify&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;feature_set&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>09cfd6564f320300fd1ce9628110c7ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notify</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_09cfd6564f320300fd1ce9628110c7ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:53</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

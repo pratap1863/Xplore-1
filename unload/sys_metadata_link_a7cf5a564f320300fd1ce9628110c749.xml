@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>lide.automated_testing_framework</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glide.automated_testing_framework"
+		name="Automated Test Framework"
+		version="1.0.0"
+		provider_name="ServiceNow"
+		state="published"
+		type="application"
+		licensable="true"
+		namespace="sn_atf"
+		cache_flush="true"&gt;
+	&lt;description&gt;Testing framework and tools for creating automated tests.&lt;/description&gt;
+
+	&lt;requires&gt;
+		&lt;import plugin="com.glide.rollback" /&gt;
+		&lt;import plugin="com.glide.ui.angular" /&gt;
+		&lt;import plugin="com.glide.element_mapping" /&gt;
+		&lt;import plugin="com.glide.vars" /&gt;
+	&lt;/requires&gt;
+
+
+	&lt;extension point="com.glide.scriptable_object" name="AutomatedTestingFramework" class="com.glide.automated_testing_framework.api.AutomatedTestingFramework"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ExecuteUserTest" class="com.glide.automated_testing_framework.api.ExecuteUserTest"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="UserTestProcessor" class="com.glide.automated_testing_framework.api.UserTestProcessor"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="UserTestSuiteExecutor" class="com.glide.automated_testing_framework.api.UserTestSuiteExecutor"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="TestClaimer" class="com.glide.automated_testing_framework.api.TestClaimer"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="StepResult" class="com.glide.automated_testing_framework.api.StepResult"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="TestSuiteProcessor" class="com.glide.automated_testing_framework.api.TestSuiteProcessor"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ATFTrackerUtil" class="com.glide.automated_testing_framework.api.ATFTrackerUtil"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ATFFormUtil" class="com.glide.automated_testing_framework.api.ATFFormUtil"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="Step" class="com.glide.automated_testing_framework.runner.step.script.Step"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="StepConfig" class="com.glide.automated_testing_framework.api.StepConfig"/&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ATFVariableElementMapper" class="com.glide.automated_testing_framework.api.ATFVariableElementMapper"/&gt;
+&lt;/plugin&gt;]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Testing framework and tools for creating automated tests.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glide.automated_testing_framework&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Automated Test Framework&lt;/name&gt;
+        &lt;path&gt;plugin://com.glide.automated_testing_framework/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.rollback,com.glide.ui.angular,com.glide.element_mapping,com.glide.vars&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:21&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;lide.automated_testing_framework&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:21&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:31:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a7cf5a564f320300fd1ce9628110c749</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Automated Test Framework</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_a7cf5a564f320300fd1ce9628110c749</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:31:02</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

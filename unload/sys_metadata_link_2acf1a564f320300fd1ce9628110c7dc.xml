@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.vulnerability.analytics</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;2.0.3&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+   id="com.snc.vulnerability.analytics"
+   name="Vulnerability Analytics"
+   state="published"
+   licensable="true"
+   trackable="true"
+   help="Vulnerability_analytics"
+   version="2.0.3"
+   provider_name="ServiceNow"
+   invalidate_properties="true"&gt;
+
+   &lt;requires&gt;
+      &lt;import plugin="com.snc.pa" /&gt;
+      &lt;import plugin="com.snc.treemap"/&gt;
+      &lt;import plugin="com.snc.vulnerability"/&gt;
+   &lt;/requires&gt;
+	
+	&lt;description&gt;  Activation of this plugin on production instances may require a separate license.  Contact ServiceNow for details.
+	&lt;/description&gt;
+ &lt;/plugin&gt;
+ 
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Activation of this plugin on production instances may require a separate license.  Contact ServiceNow for details.&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=Vulnerability_analytics&lt;/help&gt;
+        &lt;id&gt;com.snc.vulnerability.analytics&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Vulnerability Analytics&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.vulnerability.analytics/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.snc.pa,com.snc.treemap,com.snc.vulnerability&lt;/requires&gt;
+        &lt;scope&gt;sn_vul_analytics&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.vulnerability.analytics&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;2.0.3&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2acf1a564f320300fd1ce9628110c7dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vulnerability Analytics</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_2acf1a564f320300fd1ce9628110c7dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:59</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

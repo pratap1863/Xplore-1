@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.snc.contextual_search</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.snc.contextual_search"
+        name="Contextual Search Service"
+        version="1.0.0"
+        state="published"
+        provider_name="ServiceNow"
+        type="application"&gt;
+
+    &lt;description&gt;
+		Provides contextual search services
+    &lt;/description&gt;
+    
+    &lt;requires&gt;
+        &lt;import plugin="com.snc.application.json_service" /&gt;
+    &lt;/requires&gt;
+	
+	&lt;extension point="com.glide.ui.ng" name="ContextSearchService" class="com.snc.contextual_search.transport.JSONSearchService" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="FeedbackService" class="com.snc.contextual_search.transport.JSONFeedbackService" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="XMLSearchService" class="com.snc.contextual_search.transport.XMLSearchService" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="XMLFeedbackService" class="com.snc.contextual_search.transport.XMLFeedbackService" /&gt;
+	
+	&lt;extension point="com.snc.contextual_search" name="SearchService" class="com.snc.contextual_search.impl.service.SearchServiceImpl" /&gt;
+	&lt;extension point="com.snc.contextual_search" name="FeedbackService" class="com.snc.contextual_search.impl.service.FeedbackServiceImpl" /&gt;
+	
+	&lt;extension point="com.snc.contextual_search" name="SearchRequest" class="com.snc.contextual_search.impl.SearchRequestImpl" /&gt;
+	&lt;extension point="com.snc.contextual_search" name="SearchResponse" class="com.snc.contextual_search.impl.SearchResponseImpl" /&gt;
+	&lt;extension point="com.snc.contextual_search" name="SearchMetadata" class="com.snc.contextual_search.impl.SearchMetadataImpl" /&gt;
+	&lt;extension point="com.snc.contextual_search" name="SearchQuery" class="com.snc.contextual_search.impl.SearchQueryImpl" /&gt;
+	&lt;extension point="com.snc.contextual_search" name="SearchSnippet" class="com.snc.contextual_search.impl.SearchSnippetImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="SearchResult" class="com.snc.contextual_search.impl.search_result.SearchResultImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="SearchImage" class="com.snc.contextual_search.impl.SearchImageImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="SearchWindow" class="com.snc.contextual_search.impl.SearchWindowImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="SearchSource" class="com.snc.contextual_search.impl.SearchSourceImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="SearchRemote" class="com.snc.contextual_search.impl.SearchRemoteImpl" /&gt;
+
+    &lt;extension point="com.snc.contextual_search" name="FeedbackRequest" class="com.snc.contextual_search.impl.FeedbackRequestImpl" /&gt;
+    &lt;extension point="com.snc.contextual_search" name="FeedbackResponse" class="com.snc.contextual_search.impl.FeedbackResponseImpl" /&gt;
+	
+	&lt;extension point="com.snc.contextual_search.search_resource" name="KnowledgeSearchResource" class="com.snc.knowledge3.search_resource.KnowledgeSearchResource" /&gt;
+	&lt;extension point="com.snc.contextual_search.search_resource" name="PinnedArticleSearchResource" class="com.snc.knowledge3.search_resource.PinnedArticleSearchResource" /&gt;
+	&lt;extension point="com.snc.contextual_search.search_resource" name="SocialQASearchResource" class="com.snc.knowledge3.search_resource.SocialQASearchResource" /&gt;
+	
+	&lt;extension point="com.snc.contextual_search.search_resource" name="GlideRecordSearchResource" class="com.snc.contextual_search.impl.search_resource.GlideRecordSearchResource" /&gt;
+	&lt;extension point="com.snc.contextual_search.search_resource" name="ServiceCatalogSearchResource" class="com.snc.contextual_search.impl.search_resource.ServiceCatalogSearchResource" /&gt;
+	&lt;extension point="com.snc.contextual_search.search_resource" name="RESTSearchResource" class="com.snc.contextual_search.impl.search_resource.RESTSearchResource" /&gt;
+	
+	&lt;extension point="com.glide.scriptable_object" name="SearchService" class="com.snc.contextual_search.script.ScriptableSearchService" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="SearchRequest" class="com.snc.contextual_search.script.ScriptableSearchRequest" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="SearchMetadata" class="com.snc.contextual_search.script.ScriptableSearchMetadata" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchQuery" class="com.snc.contextual_search.script.ScriptableSearchQuery" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchResponse" class="com.snc.contextual_search.script.ScriptableSearchResponse" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchResult" class="com.snc.contextual_search.script.ScriptableSearchResult" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchImage" class="com.snc.contextual_search.script.ScriptableSearchImage" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchWindow" class="com.snc.contextual_search.script.ScriptableSearchWindow" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="SearchSource" class="com.snc.contextual_search.script.ScriptableSearchSource" /&gt;
+    
+    &lt;extension point="com.glide.scriptable_object" name="FeedbackService" class="com.snc.contextual_search.script.ScriptableFeedbackService" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="FeedbackRequest" class="com.snc.contextual_search.script.ScriptableFeedbackRequest" /&gt;
+    &lt;extension point="com.glide.scriptable_object" name="FeedbackResponse" class="com.snc.contextual_search.script.ScriptableFeedbackResponse" /&gt;
+    
+    &lt;extension point="com.glide.script.engine" name="FeedbackEngine" class="com.snc.contextual_search.engine.FeedbackEngine" /&gt;
+    
+    &lt;extension point="com.glide.request_manager.cancelation_decider" name="ContextualSearchCancelationDecider" class="com.snc.contextual_search.request.ContextualSearchCancelationDecider"/&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Provides contextual search services&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.snc.contextual_search&lt;/id&gt;
+        &lt;licensable&gt;false&lt;/licensable&gt;
+        &lt;name&gt;Contextual Search Service&lt;/name&gt;
+        &lt;path&gt;plugin://com.snc.contextual_search/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.snc.application.json_service&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.snc.contextual_search&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;false&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>04cfd6564f320300fd1ce9628110c708</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Contextual Search Service</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_04cfd6564f320300fd1ce9628110c708</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:49</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

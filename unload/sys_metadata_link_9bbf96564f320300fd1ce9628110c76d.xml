@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.glide.ui.vtb</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;2.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glide.ui.vtb" name="Visual Task Boards" state="published" version="2.0.0" provider_name="ServiceNow"
+		licensable="true"&gt;
+	&lt;description&gt;Task boards with lanes - structured or ad-hoc&lt;/description&gt;
+	&lt;requires&gt;
+		&lt;import plugin="com.glide.ui.ng"/&gt;
+		&lt;import plugin="com.glide.ui.font_icons"/&gt;
+		&lt;import plugin="com.glide.task"/&gt;
+		&lt;import plugin="com.glide.ui.checklist"/&gt;
+		&lt;import plugin="com.glide.ui.ng.amb"/&gt;
+		&lt;import plugin="com.glide.rest.service"/&gt;
+		&lt;import plugin="com.glide.ui.ng.filter"/&gt;
+		&lt;import plugin="com.glide.ui.magellan_navigator_api"/&gt; &lt;!-- For the favorites lib (FavoriteProcessor.java) --&gt;
+	&lt;/requires&gt;
+	&lt;extension point="com.glide.ui.ng" name="vtb" class="com.glide.ui.vtb.VTBProcessor"/&gt;
+	&lt;extension point="com.glide.ui.ng" name="vtb_stream" class="com.glide.ui.vtb.VTBActivityProcessor"/&gt;
+	&lt;extension point="com.glide.script.engine" name="vtb_card_history_tracker"
+			   class="com.glide.ui.vtb.history.CardHistoryTracker"/&gt;
+	&lt;!-- Services --&gt;
+	&lt;extension point="com.glide.rest.service" name="VtbBoardService" class="com.glide.ui.vtb.services.BoardService"/&gt;
+	&lt;extension point="com.glide.rest.service" name="VtbLaneService" class="com.glide.ui.vtb.services.LaneService"/&gt;
+	&lt;extension point="com.glide.rest.service" name="VtbCardService" class="com.glide.ui.vtb.services.CardService"/&gt;
+	&lt;!-- AMB --&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="BoardResponder"
+			   class="com.glide.ui.vtb.amb.BoardResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="LaneResponder"
+			   class="com.glide.ui.vtb.amb.LaneResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="CardResponder"
+			   class="com.glide.ui.vtb.amb.CardResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="TaskResponder"
+			   class="com.glide.ui.vtb.amb.TaskResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="BoardMemberResponder"
+			   class="com.glide.ui.vtb.amb.BoardMemberResponder"/&gt;
+	&lt;!-- TODO: Groups on hiatus --&gt;
+	&lt;!--&lt;extension point="com.glide.record_watcher.responder" name="BoardGroupResponder"--&gt;
+			   &lt;!--class="com.glide.ui.vtb.amb.BoardGroupResponder"/&gt;--&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="ChecklistResponder"
+			   class="com.glide.ui.vtb.amb.ChecklistResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="ChecklistItemResponder"
+			   class="com.glide.ui.vtb.amb.ChecklistItemResponder"/&gt;
+	&lt;extension point="com.glide.record_watcher.responder" name="AttachmentResponder"
+			   class="com.glide.ui.vtb.amb.AttachmentResponder"/&gt;
+&lt;/plugin&gt;]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Task boards with lanes - structured or ad-hoc&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glide.ui.vtb&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Visual Task Boards&lt;/name&gt;
+        &lt;path&gt;plugin://com.glide.ui.vtb/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glide.ui.ng,com.glide.ui.font_icons,com.glide.task,com.glide.ui.checklist,com.glide.ui.ng.amb,com.glide.rest.service,com.glide.ui.ng.filter,com.glide.ui.magellan_navigator_api&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.glide.ui.vtb&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;2.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9bbf96564f320300fd1ce9628110c76d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Visual Task Boards</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_9bbf96564f320300fd1ce9628110c76d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:45</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

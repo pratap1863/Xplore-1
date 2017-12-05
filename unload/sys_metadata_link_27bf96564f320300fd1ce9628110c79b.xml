@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.glideapp.servicecatalog</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+		id="com.glideapp.servicecatalog"
+		name="Service Catalog core applications"
+		version="1.0.0"
+		provider_name="ServiceNow"
+		state="published"
+		licensable="true"&gt;
+	&lt;requires&gt;
+		&lt;import plugin="com.glideapp.servicecatalog.platform" /&gt;
+		&lt;import plugin="com.glideapp.servicecatalog.execution_plan" /&gt;
+		&lt;import plugin="com.glideapp.servicecatalog.currency" /&gt;
+	&lt;/requires&gt;
+
+	&lt;description&gt;Applications core to the Service Catalog&lt;/description&gt;
+	
+	&lt;!-- Java classes scriptable API --&gt;
+	&lt;extension point="com.glide.scriptable_object" name="Cart" class="com.glideapp.servicecatalog.CartJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="Catalog" class="com.glideapp.servicecatalog.CatalogJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogPriceCalculator" class="com.glideapp.servicecatalog.pricing.CatalogPriceCalculatorJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ManageRequestOptions" class="com.glideapp.servicecatalog.ManageRequestOptionsJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogRecurringPriceCalculator" class="com.glideapp.servicecatalog.pricing.CatalogRecurringPriceCalculatorJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="Request" class="com.glideapp.servicecatalog.RequestJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="RequestItem" class="com.glideapp.servicecatalog.RequestItemJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ServiceCatalogLayoutService" class="com.glideapp.servicecatalog.ServiceCatalogLayoutServiceJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogStyleService" class="com.glideapp.servicecatalog.CatalogStyleServiceJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogCMS" class="com.glideapp.servicecatalog.script.CatalogCMS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="PageFinder" class="com.glideapp.servicecatalog.script.PageFinder" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CartBatcher" class="com.glideapp.servicecatalog.script.CartBatcher" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogURLGenerator" class="com.glideapp.servicecatalog.CatalogURLGenerator" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogItemCategory" class="com.glideapp.servicecatalog.CatalogItemCategoryJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogItemCatalog" class="com.glideapp.servicecatalog.CatalogItemCatalogJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="ScriptableOrderGuide" class="com.glideapp.servicecatalog.ScriptableOrderGuide" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="CatalogSearch" class="com.glideapp.servicecatalog.CatalogSearchJS" /&gt;
+	&lt;extension point="com.glide.scriptable_object" name="NGSCCatalogRules" class="com.glide.ui.ng.catalog.sc.model.NGSCCatalogRules" /&gt;
+
+	&lt;!-- Java Jelly Tags --&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_search_vcr_init" class="com.glideapp.servicecatalog.tags.CatalogSearchPagingTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_search_categories_set" class="com.glideapp.servicecatalog.tags.SearchCategoriesSetTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_breadcrumb" class="com.glideapp.servicecatalog.tags.BreadcrumbTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_cart" class="com.glideapp.servicecatalog.tags.CartTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_cart_table" class="com.glideapp.servicecatalog.tags.CartTableTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_category" class="com.glideapp.servicecatalog.tags.CatalogCategoryTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.item_options" class="com.glideapp.servicecatalog.tags.ItemOptionsTag2" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.item_variable_option" class="com.glideapp.servicecatalog.tags.ItemVariableOption" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.order_guide_crumbs" class="com.glideapp.servicecatalog.tags.OrderGuideCrumbsTag2" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_banner" class="com.glideapp.servicecatalog.tags.CatalogBannerTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_button" class="com.glideapp.servicecatalog.tags.CatalogButtonTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_bookmark" class="com.glideapp.servicecatalog.tags.CatalogBookmarkTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_header" class="com.glideapp.servicecatalog.tags.CatalogHeaderTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_message" class="com.glideapp.servicecatalog.tags.CatalogMessageTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_search" class="com.glideapp.servicecatalog.tags.CatalogSearchTag" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_script_emitter" class="com.glideapp.servicecatalog.CatalogScriptEmitter" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="com.glideapp.servicecatalog_script_emitter" class="com.glideapp.servicecatalog.CatalogScriptEmitter" /&gt;
+	&lt;extension point="com.glide.ui.jelly" name="sc_top_request" class="com.glideapp.servicecatalog.tags.CatalogTopRequestTag" /&gt;
+	
+	&lt;!-- AJAX processors --&gt;
+	&lt;extension point="com.glide.ajax.processors" name="CartAjaxProcessor" class="com.glideapp.servicecatalog.CartAjaxProcessor" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="CartAjaxProcessorV2" class="com.glideapp.servicecatalog.CartAjaxProcessorV2" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="CurrencyAjaxProcessor" class="com.glideapp.servicecatalog.CurrencyAjaxProcessor" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="LookupSelectProcessor" class="com.glideapp.servicecatalog.LookupSelectProcessor" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="CatalogSuggestProcessor" class="com.glideapp.servicecatalog.CatalogSuggestProcessor" /&gt;
+	&lt;extension point="com.glide.ajax.processors" name="CatalogCloneRequestAjaxProcessor" class="com.glide.catalog.cloner.CatalogCloneRequestAjaxProcessor" /&gt;
+	
+	&lt;!-- JSON processors manly used by AngularJS interface --&gt;
+	&lt;extension point="com.glide.ui.ng" name="sc.item" class="com.glide.ui.ng.catalog.sc.NGItemProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="sc.item_save" class="com.glide.ui.ng.catalog.sc.NGItemSaveProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="sc.item_publish" class="com.glide.ui.ng.catalog.sc.NGItemPublishProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="sc.item_preview" class="com.glide.ui.ng.catalog.sc.NGItemPreviewProcessor" /&gt;
+	&lt;extension point="com.glide.ui.ng" name="sc.data" class="com.glide.ui.ng.catalog.sc.NGCatalogDataProcessor" /&gt;
+	
+	&lt;extension point="com.snc.slushbucket.save.handler" name="variable_set" class="com.glide.vars2.VariableSetSave" /&gt;
+	&lt;extension point="com.snc.slushbucket.variable.set.provider" name="catalog" class="com.glideapp.servicecatalog.ItemOptionsQuestionSet" /&gt;
+	
+	&lt;extension point="com.glide.element" name="variable" class="com.glide.vars2.GlideElementVariable" /&gt;
+	&lt;extension point="com.glide.element" name="variables" class="com.glide.vars2.GlideElementVariables" /&gt;
+	
+	&lt;extension point="com.glideapp.servicecatalog.RequestNew" name="WorkflowHelper" class="com.glideapp.workflow.WorkflowHelper" /&gt;
+	&lt;extension point="com.glide.processors.lightweight.reference.util" name="catalog" class="com.glideapp.servicecatalog.CatalogClientRecord" /&gt;
+	&lt;extension point="com.glide.db.listener" name="SCStaleCacheListener" class="com.glide.catalog.db.SCStaleCacheListener" /&gt;
+	&lt;extension point="com.glide.history.extender" name="sc_task" class="com.glideapp.servicecatalog.TaskHistory" /&gt;
+	&lt;extension point="com.glide.variable.pool.question.set.provider" name="catalog" class="com.glideapp.servicecatalog.variables.VariablePoolQuestionSet" /&gt;
+	
+	&lt;extension point="com.glide.catalog.item" name="catalog" class="com.glideapp.servicecatalog.CatalogItem" /&gt;
+	&lt;extension point="com.glide.catalog.price.generator" name="catalog" class="com.glideapp.servicecatalog.pricing.PriceGenerator" /&gt;
+	&lt;extension point="com.glide.catalog.category" name="catalog" class="com.glideapp.servicecatalog.Category" /&gt;
+	&lt;extension point="com.glide.catalog.object.creator" name="catalog" class="com.glideapp.servicecatalog.CatalogObjectCreator" /&gt;
+	
+	&lt;!-- two extension points point to one class, refactor to ensure this only occurs once --&gt;
+	&lt;extension point="com.glide.sysmeta.extender" name="sc_cat_item_guide_items" class="com.glideapp.servicecatalog.variables.VariablePoolMeta" /&gt;
+	&lt;extension point="com.glide.sysmeta.extender" name="catalog_client_script" class="com.glideapp.servicecatalog.variables.VariablePoolMeta" /&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Applications core to the Service Catalog&lt;/description&gt;
+        &lt;has_demo_data&gt;true&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glideapp.servicecatalog&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Service Catalog core applications&lt;/name&gt;
+        &lt;path&gt;plugin://com.glideapp.servicecatalog/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glideapp.servicecatalog.platform,com.glideapp.servicecatalog.execution_plan,com.glideapp.servicecatalog.currency&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.glideapp.servicecatalog&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>27bf96564f320300fd1ce9628110c79b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog core applications</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_27bf96564f320300fd1ce9628110c79b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:46</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

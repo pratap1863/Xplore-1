@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.sn_customerservice</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;inactive&lt;/active&gt;
+        &lt;available_version&gt;1.2.48.8&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin
+   id="com.sn_customerservice"
+   name="Customer Service"
+   version="1.2.48.8"
+   state="published"
+   licensable="true"
+   help="CSHelp:Customer-Service-Management"
+   provider_name="ServiceNow"
+   cache_flush="true"
+   license_model="mixed"
+ &gt;
+
+   
+	&lt;requires&gt;
+		&lt;import plugin="com.snc.asset_management"/&gt;
+		&lt;import plugin="com.snc.state_flows"/&gt;
+		&lt;import plugin="com.glide.connect.support"/&gt;
+        &lt;import plugin="com.glide.connect.support.routing"/&gt;
+		&lt;import plugin="com.snc.assignment_workbench"/&gt;   
+		&lt;import plugin="com.snc.cs_base"/&gt;
+		&lt;import plugin="com.snc.skills_management"/&gt;
+		&lt;import plugin="com.snc.assessment_core"/&gt;
+        &lt;import plugin="com.snc.process_flow_formatter"/&gt;
+		&lt;import plugin="com.snc.task_relations"/&gt;
+		&lt;import plugin="com.snc.task_activity"/&gt;
+		&lt;import plugin="com.snc.matching_rule"/&gt;
+        &lt;import plugin="com.sn_resolutionshaper"/&gt; 
+        &lt;import plugin="com.sn_openframe"/&gt;
+        &lt;import plugin="com.sn_shn"/&gt;
+        &lt;import plugin="com.snc.contextual_search.dynamic_filters"/&gt;
+        &lt;import plugin="com.sn_cs_social"/&gt; 				
+    &lt;/requires&gt;
+		
+	&lt;description&gt;
+		The Customer Service Management application enables you to provide service and support for your external customers using several communication channels, such as email, web, and telephone. A case is created to keep track of the issue reported or service requested, and assigned to groups or agents. Customer service agents in your organization work on the cases and resolve issues. 
+	&lt;/description&gt;
+ &lt;/plugin&gt; 
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;The Customer Service Management application enables you to provide service and support for your external customers using several communication channels, such as email, web, and telephone. A case is created to keep track of the issue reported or service requested, and assigned to groups or agents. Customer service agents in your organization work on the cases and resolve issues.&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=CSHelp:Customer-Service-Management&lt;/help&gt;
+        &lt;id&gt;com.sn_customerservice&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Customer Service&lt;/name&gt;
+        &lt;path&gt;plugin://com.sn_customerservice/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.snc.asset_management,com.snc.state_flows,com.glide.connect.support,com.glide.connect.support.routing,com.snc.assignment_workbench,com.snc.cs_base,com.snc.skills_management,com.snc.assessment_core,com.snc.process_flow_formatter,com.snc.task_relations,com.snc.task_activity,com.snc.matching_rule,com.sn_resolutionshaper,com.sn_openframe,com.sn_shn,com.snc.contextual_search.dynamic_filters,com.sn_cs_social&lt;/requires&gt;
+        &lt;scope&gt;sn_customerservice&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.sn_customerservice&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.2.48.8&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:31:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3ecf1a564f320300fd1ce9628110c7f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Service</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_3ecf1a564f320300fd1ce9628110c7f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:31:00</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

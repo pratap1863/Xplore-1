@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>glideapp.servicecatalog.rest.api</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glideapp.servicecatalog.rest.api" 
+		name="Service Catalog REST API" 
+		version="1.0.0" 
+		provider_name="ServiceNow" 
+		scope_name="sn_sc"
+		state="published"
+		scope_sys_id="6e70d1f5c32302006f333b0ac3d3ae7b"
+		licensable="true"&gt;
+	&lt;description&gt;Service Catalog REST API&lt;/description&gt;
+	
+	&lt;requires&gt;
+		&lt;import plugin="com.glideapp.servicecatalog.scoped.api" /&gt;
+	&lt;/requires&gt;
+&lt;/plugin&gt;
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;Service Catalog REST API&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help/&gt;
+        &lt;id&gt;com.glideapp.servicecatalog.rest.api&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Service Catalog REST API&lt;/name&gt;
+        &lt;path&gt;plugin://com.glideapp.servicecatalog.rest.api/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glideapp.servicecatalog.scoped.api&lt;/requires&gt;
+        &lt;scope&gt;sn_sc&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:22&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;glideapp.servicecatalog.rest.api&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:22&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type/&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:31:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9fcf5a564f320300fd1ce9628110c73e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog REST API</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_9fcf5a564f320300fd1ce9628110c73e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:31:02</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>

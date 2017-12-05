@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>com.glide.cms</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;record_update table="v_plugin"&gt;
+    &lt;v_plugin action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;active&lt;/active&gt;
+        &lt;available_version&gt;1.0.0&lt;/available_version&gt;
+        &lt;definition&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;plugin id="com.glide.cms"
+	name="Content Management"
+	state="published"
+	licensable="true"
+	version="1.0.0" provider_name="ServiceNow"
+	afterload="install_cms_types_and_demo.js"
+	type="application"
+	help="Content_Management_Plugin"
+	cache_flush="true"&gt;
+	
+	&lt;description&gt;The Content Management application allows administrators to create custom, branded, web front ends on top of their existing ServiceNow instance&lt;/description&gt;
+	
+	&lt;requires&gt;
+	    &lt;import plugin="com.glideapp.home"/&gt;
+		&lt;import plugin="com.glide.text_search" /&gt;
+		&lt;import plugin="com.glide.db_images" /&gt;
+    &lt;/requires&gt;
+	
+	&lt;extension point="com.glide.page.header" name="content_header.xml" class="" /&gt;
+	&lt;extension point="com.glide.page.title" name="content_title.xml" class=""/&gt;
+	&lt;extension point="com.glide.ui.jelly" name="content_summarizer" class="com.glide.cms.ContentSummarizerTag"/&gt;
+    &lt;extension point="com.glide.ui.jelly" name="content_inline_grid" class="com.glide.cms.InlineGridTag"/&gt;
+	&lt;extension point="com.glide.ui.jelly" name="content_inline_dropzone" class="com.glide.cms.DropZoneTag"/&gt;
+	&lt;extension point="com.glide.ui.jelly" name="content_block" class="com.glide.cms.BlockTag"/&gt;
+	
+	&lt;extension point="com.glide.ui.virtual_host" name="cms" class="com.glide.cms.CMSSiteProvider" /&gt;
+	&lt;extension point="com.glide.ui.login_redirect" name="cmslogin" class="com.glide.cms.ContentLoginRedirect" /&gt;
+	&lt;extension point="com.glide.ui.content_provider" name="cssdb" class="com.glide.cms.CSSDBContentProvider" /&gt;
+	
+	&lt;extension point="com.glide.cms" name="newDashboardID" class="com.snc.canvas.EmailNewDashboardGenerator" /&gt;
+	
+	
+	&lt;extension point="com.glide.notification.token" name="CMS_URI+" class="com.glide.cms.CMSEmailLink" /&gt;
+&lt;/plugin&gt;
+
+
+
+]]&gt;&lt;/definition&gt;
+        &lt;description&gt;The Content Management application allows administrators to create custom, branded, web front ends on top of their existing ServiceNow instance&lt;/description&gt;
+        &lt;has_demo_data&gt;false&lt;/has_demo_data&gt;
+        &lt;help&gt;http://docs.servicenow.com/?context=Content_Management_Plugin&lt;/help&gt;
+        &lt;id&gt;com.glide.cms&lt;/id&gt;
+        &lt;licensable&gt;true&lt;/licensable&gt;
+        &lt;name&gt;Content Management&lt;/name&gt;
+        &lt;path&gt;plugin://com.glide.cms/&lt;/path&gt;
+        &lt;provider&gt;ServiceNow&lt;/provider&gt;
+        &lt;requires&gt;com.glideapp.home,com.glide.text_search,com.glide.db_images&lt;/requires&gt;
+        &lt;scope&gt;global&lt;/scope&gt;
+        &lt;state&gt;published&lt;/state&gt;
+        &lt;supports_rollback&gt;false&lt;/supports_rollback&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-12-05 06:05:21&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;com.glide.cms&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-12-05 06:05:21&lt;/sys_updated_on&gt;
+        &lt;trackable&gt;true&lt;/trackable&gt;
+        &lt;type&gt;application&lt;/type&gt;
+        &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;/v_plugin&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-05 06:30:40</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>82bf56564f320300fd1ce9628110c774</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content Management</sys_name>
+        <sys_package display_value="Plugin Xplore" source="x_22847_plugin_xpl">64db9e524f320300fd1ce9628110c747</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Plugin Xplore">64db9e524f320300fd1ce9628110c747</sys_scope>
+        <sys_update_name>sys_metadata_link_82bf56564f320300fd1ce9628110c774</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-05 06:30:40</sys_updated_on>
+        <tablename>v_plugin</tablename>
+    </sys_metadata_link>
+</record_update>
